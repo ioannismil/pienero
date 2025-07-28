@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Reminder</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#3498db"/>
+</head>
+<body>
+
+    <div id="app-container">
+        <h1>💧 Water Reminder</h1>
+
+        <!-- Setup Screen: Shown on first visit -->
+        <div id="setup-screen">
+            <h2>Welcome! Let's get started.</h2>
+            <p>We'll save your settings right here on your device.</p>
+            <input type="text" id="name-input" placeholder="What's your name?">
+            <label for="wake-up-input">I wake up at:</label>
+            <input type="time" id="wake-up-input">
+            <label for="sleep-input">I go to sleep at:</label>
+            <input type="time" id="sleep-input">
+            <button id="save-settings-btn">Save and Start</button>
+        </div>
+
+        <!-- Main Screen: Shown after setup is complete -->
+        <div id="main-screen" style="display: none;">
+            <h2 id="welcome-message"></h2>
+            <p>Your schedule:</p>
+            <p><strong>Wake up:</strong> <span id="wake-up-display"></span></p>
+            <p><strong>Sleep:</strong> <span id="sleep-display"></span></p>
+            
+            <button id="enable-notifications-btn">Enable Reminders</button>
+            <p id="notification-status"></p>
+
+            <button id="reset-btn">Change Settings</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
